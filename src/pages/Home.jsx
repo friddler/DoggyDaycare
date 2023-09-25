@@ -9,7 +9,7 @@ function Home() {
             <h2>Welcome To</h2>
             <h1>Doggy Daycare</h1>
             <p>Caring for Dogs, One Tail at a Time.</p>
-            <button>Our Dogs</button>
+            <button>Our dogs</button>
         </div>
     </div>
     <div className='aboutContainer'>
