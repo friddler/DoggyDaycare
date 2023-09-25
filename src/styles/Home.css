@@ -14,3 +14,57 @@
     text-align: center;
     font-family: 'Poppins', sans-serif;
 }
+
+/* WELCOME CONTAINER */
+
+.welcomeContainer {
+    width: auto;
+    margin-right: 90px;
+    margin-bottom: 150px;
+}
+
+.welcomeContainer h2{
+    font-size: 30px;
+    height: 2px;
+}
+
+.welcomeContainer h1{
+    font-size: 80px;
+    height: 60px;
+}
+
+.welcomeContainer p {
+    font-size: 30px;
+    
+}
+
+.welcomeContainer button {
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    height: 50px;
+    width: 180px;
+    text-decoration: none;
+    font-size: 20px;
+    background-color: #6286a1;
+}
+
+.welcomeContainer button:hover{
+    background-color: #395061;
+    cursor: pointer;
+    transition: 0.3s ease-in;
+}
+
+/* ABOUT CONTAINER */
+
+.aboutContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 70vh;
+    font-family: 'Poppins', sans-serif;
+}
+
+
