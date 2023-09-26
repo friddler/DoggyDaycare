@@ -46,11 +46,11 @@
     width: 180px;
     text-decoration: none;
     font-size: 20px;
-    background-color: #6286a1;
+    background-color: #6CB0CD;
 }
 
 .welcomeContainer button:hover{
-    background-color: #395061;
+    background-color: #518297;
     cursor: pointer;
     transition: 0.3s ease-in;
 }
