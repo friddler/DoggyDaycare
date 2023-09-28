@@ -11,6 +11,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    font-family: 'Poppins', sans-serif;
     text-align: center;
 }
 
@@ -24,7 +25,8 @@
 
 .welcomeContainer h2{
     font-size: 30px;
-    height: 2px;
+    height: 1px;
+    
 }
 
 .welcomeContainer h1{
