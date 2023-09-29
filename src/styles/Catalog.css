@@ -23,7 +23,7 @@
     place-items: center;
   }
   
-  /* MENU ITEM STYLING */
+  /* DOG STYLING */
   
   .dog {
     border-radius: 25px;
@@ -52,3 +52,9 @@
   .dog h1 {
     text-align: center;
   }
+
+  /* ERROR TEXT */
+
+.errorText {
+  
+}
