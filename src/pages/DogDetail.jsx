@@ -1,3 +1,4 @@
+import '../styles/DogDetail.css'
 
 function DogDetail() {
   return (
