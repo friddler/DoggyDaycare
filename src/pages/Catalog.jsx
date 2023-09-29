@@ -12,7 +12,7 @@ function Catalog() {
   const fetchData = async () => {
     try {
       const response = await fetch(
-        "https://api.jsonbin.io/v3/b/650a7ebece39bb6dce7f568"
+        "https://api.jsonbin.io/v3/b/650a7ebece39bb6dce7f5683"
       );
 
       if (!response.ok) {
