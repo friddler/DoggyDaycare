@@ -49,20 +49,23 @@ function Catalog() {
           dogs.map((dog) => (
             <div
               key={dog.chipNumber}
-              className="dog"
+              className={`dog ${selectedDog === dog ? "active" : ""}`}
               onClick={() => toggleDog(dog)}
             >
-              <img src={dog.img} alt={dog.name} />
+              <div className="dogImageWrapper">
+                <img src={dog.img} alt={dog.name} />
+                {selectedDog === dog && (
+                  <div className="dogDetails">
+                    <p>Breed: {dog.breed}</p>
+                    <p>Age: {dog.age}</p>
+                    <p>Sex: {dog.sex}</p>
+                    <p>Present: {dog.present ? "Yes" : "No"}</p>
+                    <p>Owner: {dog.owner.name} {dog.owner.lastName}</p>
+                    <p>Phone number: {dog.owner.phoneNumber}</p>
+                  </div>
+                )}
+              </div>
               <h1>{dog.name}</h1>
-              {selectedDog === dog && (
-                <div className="dogDetails">
-                  <p>Breed: {dog.breed}</p>
-                  <p>Age: {dog.age}</p>
-                  <p>Sex: {dog.sex}</p>
-                  <p>Present: {dog.present ? "yes" : "no"}</p>
-                  <p>Owner: {dog.owner.name}</p>
-                </div>
-              )}
             </div>
           ))
         )}
