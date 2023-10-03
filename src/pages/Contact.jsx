@@ -1,15 +1,12 @@
 import "../styles/Contact.css";
-import DogVideo from '../assets/dogvideo.mp4'
+import HomeImage from "../assets/homeb.png";
 
 function Contact() {
   return (
-    <div className="contact">
-     <div className='video-container'>
-      <video autoPlay loop muted>
-        <source src={DogVideo} type="video/mp4"/>
-      </video>
+    <div className="contact"  style={{ backgroundImage: `url(${HomeImage})` }}>
+  
      </div>
-    </div>
+
   )
 }
 
