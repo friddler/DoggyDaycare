@@ -4,6 +4,15 @@ import "../styles/Catalog.css";
 function Catalog() {
   const [dogs, setDogs] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [selectedDog, setSelectedDog] = useState(null);
+
+  const toggleDog = (dog) => {
+    if (selectedDog === dog) {
+      setSelectedDog(null);
+    } else {
+      setSelectedDog(dog);
+    }
+  };
 
   useEffect(() => {
     fetchData();
@@ -38,9 +47,22 @@ function Catalog() {
           <h1 className="errorText">No dogs found &#128546;</h1>
         ) : (
           dogs.map((dog) => (
-            <div key={dog.chipNumber} className="dog">
+            <div
+              key={dog.chipNumber}
+              className="dog"
+              onClick={() => toggleDog(dog)}
+            >
               <img src={dog.img} alt={dog.name} />
               <h1>{dog.name}</h1>
+              {selectedDog === dog && (
+                <div className="dogDetails">
+                  <p>Breed: {dog.breed}</p>
+                  <p>Age: {dog.age}</p>
+                  <p>Sex: {dog.sex}</p>
+                  <p>Present: {dog.present ? "yes" : "no"}</p>
+                  <p>Owner: {dog.owner.name}</p>
+                </div>
+              )}
             </div>
           ))
         )}
