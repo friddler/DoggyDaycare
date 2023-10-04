@@ -93,3 +93,24 @@
   height: 330px;
   overflow: hidden; 
 }
+
+@media screen and (max-width: 768px) {
+
+  .catalog .catalogTitle {
+    font-size: 30px;
+  }
+
+  .catalogList {
+    gap: 20px;
+  }
+
+  .dog {
+    max-width: 100%;  
+    padding: 5px;
+  }
+
+  .dog img {
+    height: 330px;
+  }
+  
+}

@@ -87,5 +87,41 @@
     transition: 0.3s ease-in;
 }
 
+@media screen and (max-width: 768px) {
+    
+    .welcomeContainer {
+        width: 100%;
+    }
+
+    .welcomeContainer h2{
+        font-size: 20px;
+    }
+
+    .welcomeContainer h1{
+        font-size: 40px;
+    }
+
+    .welcomeContainer p {
+        font-size: 20px;
+    }
+
+    .welcomeContainer button {
+        font-size: 16px;
+        height: 40px;
+        width: 150px;
+    }
+
+     .video-container video {
+        min-width: 100%;
+        min-height: 100%;
+        width: 100vw;
+        height: 100vw;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
 
 
