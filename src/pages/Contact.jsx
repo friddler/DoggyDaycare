@@ -1,39 +1,52 @@
 /* eslint-disable react/no-unescaped-entities */
 import "../styles/Contact.css";
-import HomeImage from "../assets/backgroundcontact.png";
 import { useState } from "react";
+import DogVideo from "../assets/dogcontact.mp4";
 
 function Contact() {
-
   const [formSubmit, setFormSubmit] = useState(false);
-
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
     setFormSubmit(true);
-  }
+  };
+
   return (
-    <div className="contact" style={{ backgroundImage: `url(${HomeImage})` }}>
+    <div className="contact">
+      <div className="video-container">
+          <video autoPlay muted>
+            <source src={DogVideo} type="video/mp4" />
+          </video>
+        </div>
       <div className="form-container">
-        <h1>Contact Us</h1>
-        <h3>We'd love to hear from you!</h3>
-        <p>
-          If you have any questions about our services, want to book a stay for
-          your furry friend, or just want to say hello, don't hesitate to get in
-          touch. Fill out the form below, and we'll get back to you as soon as
-          we can.
-        </p>
-        <form onSubmit={handleSubmit}>
-          <div className="input-texts">
-            <input type="text" placeholder="Full name:" />
-            <input type="text" placeholder="Email Address:" />
-            <input type="text" placeholder="Phone Number:" />
-            <input type="text" placeholder="Dog's Name:" />
+        {formSubmit ? (
+          <div className="submitted-text">
+            <h1>Thank you!</h1>
+            <p>Thanks for reaching out. We'll respond as soon as we can.</p>
           </div>
-          <textarea placeholder="Message:" rows="4"></textarea>
-          <button type="submit">Submit</button>
-        </form>
+        ) : (
+          <>
+            <h1>Contact Us</h1>
+            <h3>We'd love to hear from you!</h3>
+            <p>
+              If you have any questions about our services, want to book a stay
+              for your furry friend, or just want to say hello, don't hesitate
+              to get in touch. Fill out the form below, and we'll get back to
+              you as soon as we can.
+            </p>
+            <form onSubmit={handleSubmit}>
+              <div className="input-texts">
+                <input type="text" placeholder="Full name:" />
+                <input type="text" placeholder="Email Address:" />
+                <input type="text" placeholder="Phone Number:" />
+                <input type="text" placeholder="Dog's Name:" />
+              </div>
+              <textarea placeholder="Message:" rows="4"></textarea>
+              <button type="submit">Submit</button>
+            </form>
+          </>
+        )}
         <h3>For immiediate assistance or to book a stay, give us a call.</h3>
         <p>0761836562</p>
         <h3>Want to visit us? Here's where you can find our daycare.</h3>
