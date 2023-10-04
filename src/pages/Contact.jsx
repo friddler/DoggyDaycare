@@ -14,7 +14,7 @@ function Contact() {
 
   return (
     <div className="contact">
-      <div className="video-container">
+      <div className="contact-video-container">
           <video autoPlay muted>
             <source src={DogVideo} type="video/mp4" />
           </video>
