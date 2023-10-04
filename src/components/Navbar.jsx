@@ -17,6 +17,12 @@ function Navbar() {
           HOME
         </Link>
         <Link
+          to="/about"
+          className={location.pathname === "/about" ? "active-link" : ""}
+        >
+          ABOUT
+        </Link>
+        <Link
           to="/catalog"
           className={location.pathname === "/catalog" ? "active-link" : ""}
         >
@@ -28,6 +34,7 @@ function Navbar() {
         >
           CONTACT
         </Link>
+        
       </div>
     </div>
   );
