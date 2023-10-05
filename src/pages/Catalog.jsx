@@ -15,27 +15,27 @@ function Catalog() {
   };
 
   useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch(
+          "https://api.jsonbin.io/v3/b/651e764012a5d37659877b73"
+        );
+
+        if (!response.ok) {
+          throw Error("Doesn't work");
+        }
+
+        const data = await response.json();
+        setDogs(data.record);
+        setIsLoading(false);
+      } catch (error) {
+        console.error("FEL FEL FEL", error);
+        setIsLoading(false);
+      }
+    };
+
     fetchData();
   }, []);
-
-  const fetchData = async () => {
-    try {
-      const response = await fetch(
-        "https://api.jsonbin.io/v3/b/650a7ebece39bb6dce7f5683"
-      );
-
-      if (!response.ok) {
-        throw Error("Doesn't work");
-      }
-
-      const data = await response.json();
-      setDogs(data.record);
-      setIsLoading(false);
-    } catch (error) {
-      console.error("FEL FEL FEL", error);
-      setIsLoading(false);
-    }
-  };
 
   return (
     <div className="catalog">
@@ -60,7 +60,9 @@ function Catalog() {
                     <p>Age: {dog.age}</p>
                     <p>Sex: {dog.sex}</p>
                     <p>Present: {dog.present ? "Yes" : "No"}</p>
-                    <p>Owner: {dog.owner.name} {dog.owner.lastName}</p>
+                    <p>
+                      Owner: {dog.owner.name} {dog.owner.lastName}
+                    </p>
                     <p>Phone number: {dog.owner.phoneNumber}</p>
                   </div>
                 )}
