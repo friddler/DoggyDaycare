@@ -9,6 +9,8 @@
   align-items: center;
   flex-direction: column;
   font-family: 'Poppins', sans-serif;
+  
+  
 }
 
 .catalogTitle {
@@ -19,7 +21,7 @@
 .catalogList {
   display: flex;
   flex-wrap: wrap; 
-  justify-content: center; 
+  justify-content: center;
   align-items: center; 
   width: 100%;
   max-width: 1600px; 
@@ -69,13 +71,9 @@
 }
 
 .dogImageWrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
   width: 100%;
   height: 350px;
-  overflow: hidden; 
+  overflow: hidden;
 }
 
 @media screen and (max-width: 768px) {

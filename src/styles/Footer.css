@@ -25,10 +25,10 @@
 .socialMedia svg{
     font-size: 40px;
     cursor: pointer;
-    color: #395061;
+    color: #6CB0CD; 
     margin: 0 10px;
     transition: color 0.3s ease;
 }
 .socialMedia svg:hover {
-    color: #6CB0CD; 
+    color: #395061;
 }
