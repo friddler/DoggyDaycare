@@ -1,17 +1,17 @@
 import { useState, useEffect } from "react";
 import "../styles/Catalog.css";
+import { useNavigate } from "react-router-dom";
 
 function Catalog() {
   const [dogs, setDogs] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
-  const [selectedDog, setSelectedDog] = useState(null);
+  const navigate = useNavigate();
 
-  const toggleDog = (dog) => {
-    if (selectedDog === dog) {
-      setSelectedDog(null);
-    } else {
-      setSelectedDog(dog);
-    }
+  /*navigerar till detail-komponenten. tar in 'dog' som argument,
+  skickar med hela hundobjektet som en state
+  */
+  const goToDogDetail = (dog) => {
+    navigate(`/catalog/${dog.name}`, {state: {dog}});
   };
 
   useEffect(() => {
@@ -49,23 +49,11 @@ function Catalog() {
           dogs.map((dog) => (
             <div
               key={dog.chipNumber}
-              className={`dog ${selectedDog === dog ? "active" : ""}`}
-              onClick={() => toggleDog(dog)}
+              className="dog"
+              onClick={() => goToDogDetail(dog)}
             >
               <div className="dogImageWrapper">
                 <img src={dog.img} alt={dog.name} />
-                {selectedDog === dog && (
-                  <div className="dogDetails">
-                    <p>Breed: {dog.breed}</p>
-                    <p>Age: {dog.age}</p>
-                    <p>Sex: {dog.sex}</p>
-                    <p>Present: {dog.present ? "Yes" : "No"}</p>
-                    <p>
-                      Owner: {dog.owner.name} {dog.owner.lastName}
-                    </p>
-                    <p>Phone number: {dog.owner.phoneNumber}</p>
-                  </div>
-                )}
               </div>
               <h1>{dog.name}</h1>
             </div>
