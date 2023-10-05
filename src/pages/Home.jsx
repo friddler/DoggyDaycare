@@ -14,7 +14,7 @@ function Home() {
         <div className="welcomeContainer">
           <h2>Welcome To</h2>
           <h1>Doggy Daycare</h1>
-          <p>Caring for Dogs, One Tail at a Time.</p>
+          <p>Caring for Dogs, One Tail at a Time</p>
           <Link to="/catalog">
             <button>Our dogs</button>
           </Link>
