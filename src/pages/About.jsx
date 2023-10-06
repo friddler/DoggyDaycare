@@ -1,6 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import "../styles/About.css";
 import DogBackground from "../assets/homeb.png";
+import Logo from "../assets/logo1.png"
 
 const About = () => {
   return (
@@ -9,6 +10,7 @@ const About = () => {
         <img src={DogBackground} alt="DoggyDaycare" />
       </div>
       <div className="about-content">
+        <img src={Logo} alt="DoggyDaycare" />
         <h1>About DoggyDaycare</h1>
         <p>
           Welcome to DoggyDaycare, a haven for your furry friends. Here, every
